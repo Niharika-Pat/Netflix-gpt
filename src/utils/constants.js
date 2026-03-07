@@ -12,3 +12,4 @@ export const OPTIONS = {
 
 export const MOVIE_TRAILER_PART1 = "https://api.themoviedb.org/3/movie/";
 export const MOVIE_TRAILER_PART2 = "/videos";
+export const MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/w500/";
