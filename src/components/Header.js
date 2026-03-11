@@ -6,6 +6,7 @@ import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { addUser } from "../utils/userSlice";
 import { LOGO_URL } from "../utils/constants";
+import { setGptModeOn } from "../utils/gptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -39,11 +40,21 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
+  const handleGptSearch = () => {
+    dispatch(setGptModeOn());
+  };
+
   return (
     <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 w-full flex justify-between">
       <img className="w-44" src={LOGO_URL} />
       {user && (
-        <div className="flex">
+        <div className="flex p-2">
+          <button
+            className="py-2 px-4 mx-4 my-2 h-10 text-white bg-blue-300 rounded-md"
+            onClick={handleGptSearch}
+          >
+            GPT Search
+          </button>
           <img className="w-12 h-12" src={user.photoURL}></img>
           <button
             className="m-7 h-5 bg-red-700 text-white rounded"

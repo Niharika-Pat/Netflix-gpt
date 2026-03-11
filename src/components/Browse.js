@@ -3,15 +3,24 @@ import useNowPlayingMovies from "../hooks/useNowPlayingMovies";
 import usePopularMovies from "../hooks/usePopularMovies";
 import MainComponent from "./MainComponent";
 import SecondaryComponent from "./SecondaryComponent";
+import GptSearch from "./GptSearch";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
+  const gptMode = useSelector((store) => store.gpt?.gptModeOn);
   useNowPlayingMovies();
   usePopularMovies();
   return (
     <div>
       <Header />
-      <MainComponent />
-      <SecondaryComponent />
+      {gptMode === true ? (
+        <GptSearch />
+      ) : (
+        <>
+          <MainComponent />
+          <SecondaryComponent />
+        </>
+      )}
     </div>
   );
 };
