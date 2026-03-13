@@ -5,13 +5,11 @@ export const OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNGMyOWViZWQ2NTAzM2ZlZTkzMjRjYTkzNzc2MGY4NCIsIm5iZiI6MTc3MjQ2ODQzNi41NzIsInN1YiI6IjY5YTViOGQ0ZDRhYWE0ZmJhY2RlOTkyNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.f1cIaVe2Afu1nHuUmJkH7a4vM2kLndFSggUghiXJJxo",
+    Authorization: "Bearer " + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
 export const MOVIE_TRAILER_PART1 = "https://api.themoviedb.org/3/movie/";
 export const MOVIE_TRAILER_PART2 = "/videos";
 export const MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/w500/";
-export const OPEN_API_KEY =
-  "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";
+export const OPEN_API_KEY = process.env.REACT_APP_OPENAI_KEY;
