@@ -13,3 +13,5 @@ export const OPTIONS = {
 export const MOVIE_TRAILER_PART1 = "https://api.themoviedb.org/3/movie/";
 export const MOVIE_TRAILER_PART2 = "/videos";
 export const MOVIE_IMAGE_URL = "https://image.tmdb.org/t/p/w500/";
+export const OPEN_API_KEY =
+  "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";
