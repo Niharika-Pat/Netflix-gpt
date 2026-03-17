@@ -5,11 +5,18 @@ import MainComponent from "./MainComponent";
 import SecondaryComponent from "./SecondaryComponent";
 import GptSearch from "./GptSearch";
 import { useSelector } from "react-redux";
+import { use } from "react";
+import useTopRatedMovies from "../hooks/useTopRatedMovies";
+import useTopTvSeries from "../hooks/useTopTvSeries";
+import useUpcomingMovies from "../hooks/useUpcomingMovies";
 
 const Browse = () => {
   const gptMode = useSelector((store) => store.gpt?.gptModeOn);
   useNowPlayingMovies();
   usePopularMovies();
+  useTopRatedMovies();
+  useTopTvSeries();
+  useUpcomingMovies();
   return (
     <div>
       <Header />

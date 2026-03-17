@@ -55,9 +55,8 @@ const Header = () => {
           >
             GPT Search
           </button>
-          <img className="w-12 h-12" src={user.photoURL}></img>
           <button
-            className="m-7 h-5 bg-red-700 text-white rounded"
+            className="py-2 px-4 mx-4 my-2 h-10 bg-red-700 text-white rounded-md"
             onClick={signOutFn}
           >
             Sign Out

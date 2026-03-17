@@ -18,7 +18,6 @@ const GptSearchBar = () => {
       OPTIONS,
     );
     const data = await response.json();
-    console.log(data);
   };
 
   const handleSearch = async () => {
@@ -30,7 +29,6 @@ const GptSearchBar = () => {
 
     if (!gptResults.choices) {
     }
-    console.log(gptResults.choices?.[0]?.message?.content);
 
     const movies = gptResults.choices?.[0]?.message?.content.split(",");
     const promiseArray = movies.map((movie) => searchMovieTmdb(movie));

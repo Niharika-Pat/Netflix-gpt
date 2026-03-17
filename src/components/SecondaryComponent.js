@@ -8,9 +8,9 @@ const SecondaryComponent = () => {
       <div className="-mt-24 pl-12 relative z-20">
         <MovieList title={"Now Playing"} movies={movies?.nowPlayingMovies} />
         <MovieList title={"Popular"} movies={movies?.popularMovies} />
-        <MovieList title={"Top Asian"} movies={movies?.nowPlayingMovies} />
-        <MovieList title={"Top Hollywood"} movies={movies?.nowPlayingMovies} />
-        <MovieList title={"Top Bollywood"} movies={movies?.nowPlayingMovies} />
+        <MovieList title={"Top Rated"} movies={movies?.topRatedMovies} />
+        <MovieList title={"Upcoming"} movies={movies?.upcomingMovies} />
+        <MovieList title={"Top TV Series"} movies={movies?.topSeries} />
       </div>
     </div>
   );
